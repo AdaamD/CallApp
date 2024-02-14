@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">TP1</string>
-    <string name="nom"> Entrez votre nom </string>
-    <string name="prenom"> Entrez votre prénom</string>
-    <string name="age"> Entrez votre âge </string>
-    <string name="domaine"> Entrez votre domaine de compétence</string>
-    <string name="telephone"> Entrez votre numéro de téléphone </string>
+    <string name="app_name" translatable="false">TP1</string>
+    <string name="nom">Entrez votre nom</string>
+    <string name="prenom">Entrez votre prénom</string>
+    <string name="age">Entrez votre âge</string>
+    <string name="domaine">Entrez votre domaine de compétence</string>
+    <string name="telephone">Entrez votre numéro de téléphone</string>
 </resources>

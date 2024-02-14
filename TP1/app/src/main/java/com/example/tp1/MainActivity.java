@@ -3,6 +3,8 @@ package com.example.tp1;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText domaineEditText;
     private EditText telephoneEditText;
     private TextView resumeTextView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         telephoneEditText = findViewById(R.id.telephoneEditText);
         resumeTextView = findViewById(R.id.resumeTextView);
 
+        //Button submit est cliqué
         Button submitButton = findViewById(R.id.butonSubmit);
 
         submitButton.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        //Button de changement de langue est cliqué
+        Button changeLanguageButton = findViewById(R.id.changeLanguageButton);
+
+        changeLanguageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Changez la langue ici
+                changerLangue();
+            }
+        });
+
     }
 
     private void submitForm() {
@@ -70,4 +89,31 @@ public class MainActivity extends AppCompatActivity {
 
         dialog.show();
     }
+
+    // Méthode pour changer la langue de l'application
+    private void changerLangue() {
+        // Récupérer la langue actuelle
+        String currentLanguage = getResources().getConfiguration().locale.getLanguage();
+
+        // Changer la langue
+        if (currentLanguage.equals("en")) {
+            setLocale("fr"); // Changer en français
+        } else {
+            setLocale("en"); // Changer en anglais
+        }
+
+        // Redémarrer l'activité pour appliquer les changements de langue
+        recreate();
+    }
+
+    // Méthode pour définir la langue de l'application
+    private void setLocale(String lang) {
+        Locale locale = new Locale(lang);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+    }
+
+
 }
