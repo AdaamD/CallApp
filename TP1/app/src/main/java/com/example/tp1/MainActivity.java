@@ -3,6 +3,7 @@ package com.example.tp1;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
@@ -88,6 +89,21 @@ public class MainActivity extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(backgroundDrawable);
 
         dialog.show();
+
+        // Créer un nouvel Intent pour lancer la nouvelle activité
+        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+        // Ajouter les données récupérées en tant qu'extra dans l'Intent
+        intent.putExtra("NOM", nom);
+        intent.putExtra("PRENOM", prenom);
+        intent.putExtra("AGE", age);
+        intent.putExtra("DOMAINE", domaine);
+        intent.putExtra("TELEPHONE", telephone);
+
+        // Lancer la nouvelle activité avec l'Intent
+        startActivity(intent);
+
+
     }
 
     // Méthode pour changer la langue de l'application
