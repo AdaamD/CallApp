@@ -8,12 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity {
+public class RecapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_recap);
 
     // Extraire les données de l'intent
         Intent intent = getIntent();
@@ -35,7 +35,7 @@ public class SecondActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Lancer une troisième activité, par exemple une activité vide
-                    Intent intent = new Intent(SecondActivity.this, TroisiemeActivity.class);
+                    Intent intent = new Intent(RecapActivity.this, CallActivity.class);
                    //        // Ajouter les données récupérées en tant qu'extra dans l'Intent
                     intent.putExtra("TELEPHONE", telephone);
 

@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-public class TroisiemeActivity extends AppCompatActivity {
+public class CallActivity extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST_CALL_PHONE = 1;
     private String telephone;
@@ -23,7 +23,7 @@ public class TroisiemeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_troisieme);
+        setContentView(R.layout.activity_call);
 
         Button retourButton = findViewById(R.id.retourButton);
 
@@ -39,10 +39,10 @@ public class TroisiemeActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // Vérifier si la permission CALL_PHONE a été accordée
-                    if (ContextCompat.checkSelfPermission(TroisiemeActivity.this, Manifest.permission.CALL_PHONE)
+                    if (ContextCompat.checkSelfPermission(CallActivity.this, Manifest.permission.CALL_PHONE)
                             != PackageManager.PERMISSION_GRANTED) {
                         // Si la permission n'a pas été accordée, demander à l'utilisateur de l'accorder
-                        ActivityCompat.requestPermissions(TroisiemeActivity.this,
+                        ActivityCompat.requestPermissions(CallActivity.this,
                                 new String[]{Manifest.permission.CALL_PHONE},
                                 MY_PERMISSIONS_REQUEST_CALL_PHONE);
                     } else {

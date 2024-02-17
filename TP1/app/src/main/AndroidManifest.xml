@@ -31,11 +31,11 @@
         </activity>
 
         <!-- Deuxieme Activité -->
-        <activity android:name=".SecondActivity"
+        <activity android:name=".RecapActivity"
         />
 
         <!-- Troisieme Activité -->
-        <activity android:name=".TroisiemeActivity"
+        <activity android:name=".CallActivity"
             />
     </application>
 
