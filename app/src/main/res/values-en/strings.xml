@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string name="nom">Enter your name</string>
+        <string name="prenom">Enter your lastname</string>
+        <string name="age">Enter your age</string>
+        <string name="domaine">Enter your field of knowledge</string>
+        <string name="telephone">Enter your phone number</string>
+
+</resources>
