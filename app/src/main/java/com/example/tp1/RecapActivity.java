@@ -19,13 +19,25 @@ public class RecapActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             String nom = intent.getStringExtra("NOM");
-
+            String prenom = intent.getStringExtra("PRENOM");
+            String age = intent.getStringExtra("AGE");
+            String domaine = intent.getStringExtra("DOMAINE");
+            String ntelephone = intent.getStringExtra("TELEPHONE");
 
             // Afficher le texte récupéré dans TextViews ou d'autres vues
             TextView nomTextView = findViewById(R.id.TextView_Nom);
             nomTextView.setText("Bonjour  " + nom);
+            TextView prenomTextView = findViewById(R.id.TextView_Prenom);
+            prenomTextView.setText("Prénom : " + prenom);
+            TextView ageTextView = findViewById(R.id.TextView_Age);
+            ageTextView.setText("Age : " + age);
+            TextView domaineTextView = findViewById(R.id.TextView_Domaine);
+            domaineTextView.setText("Domaine : " + domaine);
+            TextView telephoneTextView = findViewById(R.id.TextView_Telephone);
+            telephoneTextView.setText("Téléphone : " + ntelephone);
 
-    //Action des 2 boutons
+
+            //Action des 2 boutons
             Button okButton = findViewById(R.id.okButton);
             Button retourButton = findViewById(R.id.retourButton);
 

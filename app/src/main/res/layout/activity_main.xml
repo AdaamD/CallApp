@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Bienvenue sur ma première page "
+        android:text="Bienvenue sur la page de saisie de contact"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/grey"
         android:textSize="35sp"
