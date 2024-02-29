@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -105,6 +106,13 @@ public class MainActivity extends AppCompatActivity {
         String age = ageEditText.getText().toString();
         String domaine = domaineEditText.getText().toString();
         String telephone = telephoneEditText.getText().toString();
+
+    // Vérification du numéro de téléphone
+        if (telephone.length() != 10 || !telephone.startsWith("0")) {
+            // Afficher un message d'erreur ou effectuer une action appropriée
+            Toast.makeText(this, "Le numéro de téléphone doit avoir 10 chiffres", Toast.LENGTH_SHORT).show();
+            return; // Arrêter le traitement du formulaire
+        }
 
 
         // Créer un nouvel Intent pour lancer la nouvelle activité
